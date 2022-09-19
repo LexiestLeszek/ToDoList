@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Todo List</title>
+        <style>
+            body{width: 250px}
+            .todo-items,
+            .todo-items li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .todo-items li {
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .todo-items li:hover{
+                background: rgba(0,0,0,0.25);
+            }
+
+            .todo-items li.done .item{
+                text-decoration: line-through;
+            }
+            .todo-items div span{
+                margin: 3px;
+                font-size: 1.5em;
+                cursor: pointer;
+            }
+            .new-item {
+                display: none;
+            }
+
+            .new-item div span{
+                margin: 5px;
+                font-size: 2em;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My ToDo's
+            <button class="create-todo">➕</button>
+                <div class="new-item"> 
+                    <input type="text"/>
+                    <button>Save</button>
+                </div>
+        </h1>
+
+        <ul class="todo-items">
+        </ul>
+
+        <script src="popout.js"></script>
+    </body>
+</html>
